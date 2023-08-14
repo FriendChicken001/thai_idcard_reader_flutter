@@ -20,6 +20,7 @@ import io.flutter.plugin.common.MethodChannel.Result
 import java.nio.charset.*
 import java.util.*
 import org.json.JSONObject
+import android.util.Log
 
 const val ACTION_USB_PERMISSION = "com.example.thai_idcard_reader_flutter.USB_PERMISSION"
 const val ACTION_USB_ATTACHED = "android.hardware.usb.action.USB_DEVICE_ATTACHED"
