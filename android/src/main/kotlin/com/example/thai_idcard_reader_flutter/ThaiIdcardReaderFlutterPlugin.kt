@@ -100,7 +100,18 @@ class ThaiIdcardReaderFlutterPlugin : FlutterPlugin, MethodCallHandler, EventCha
       dev["productName"] = device?.productName
       dev["interfaceCount"] = device?.interfaceCount
     }
+
     dev["deviceId"] = device?.deviceId
+
+    Log.d("identifier", device?.deviceName)
+    Log.d("vendorId", device?.vendorId.toString())
+    Log.d("productId", device?.productId.toString())
+    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+      Log.d("manufacturerName", device?.manufacturerName)
+      Log.d("productName", device?.productName)
+      Log.d("interfaceCount", device?.interfaceCount.toString())
+    }
+
     return dev
   }
 
